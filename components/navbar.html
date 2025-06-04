@@ -1,0 +1,122 @@
+<header class="bg-white">
+  <nav
+    class="flex items-center justify-between container-center py-2.5 lg:py-7.5"
+    aria-label="Global"
+  >
+    <a href="/index.html" class="-m-1.5 p-1.5 shrink-0">
+      <span class="sr-only">CHEChallenge</span>
+      <img
+        class="h-14 lg:h-20 w-auto"
+        src="/assets/images/logo.webp"
+        alt="CHEChallenge"
+      />
+    </a>
+    <div class="hidden lg:flex items-center lg:gap-x-12">
+      <a
+        href="index.html#chechallenge"
+        class="text-2sm/none uppercase text-black-secondary"
+        >COS’è <span class="font-semibold">CHE</span>CHALLeNGE?</a
+      >
+      <a
+        href="index.html#approfondimenti"
+        class="text-2sm/none uppercase text-black-secondary"
+        >TUTTI gli approfondimenti</a
+      >
+
+      <a href="#" class="-m-1.5 p-1.5">
+        <img
+          class="size-12 rounded-full object-cover"
+          src="/assets/images/avatar-placeholder.webp"
+          alt="user"
+        />
+      </a>
+    </div>
+    <div class="flex lg:hidden">
+      <button
+        id="open-navbar-mobile"
+        type="button"
+        class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+      >
+        <span class="sr-only">Open main menu</span>
+        <svg
+          class="size-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          aria-hidden="true"
+          data-slot="icon"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+          />
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <div
+    id="dialog-navbar-mobile"
+    class="lg:hidden hidden fixed inset-0 z-[99]"
+    role="dialog"
+    aria-modal="true"
+  >
+    <div
+      id="menu-backdrop"
+      class="hidden fixed inset-0 z-[99] bg-black/60"
+    ></div>
+    <div
+      class="fixed top-0 inset-x-0 z-[99] w-full bg-white shadow-xl overflow-hidden px-6 py-2.5 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
+    >
+      <div class="flex items-center justify-between">
+        <a href="/index.html" class="-m-1.5 p-1.5 shrink-0">
+          <span class="sr-only">CHEChallenge</span>
+          <img
+            class="h-14 lg:h-20 w-auto"
+            src="/assets/images/logo.webp"
+            alt="CHEChallenge"
+          />
+        </a>
+        <button
+          id="close-navbar-mobile"
+          type="button"
+          class="-m-2.5 rounded-md p-2.5"
+        >
+          <span class="sr-only">Close menu</span>
+          <img src="/assets/icons/x.webp" alt="x" class="size-4" />
+        </button>
+      </div>
+      <div class="mt-6 flow-root">
+        <div class="-my-6 divide-y divide-gray-500/10">
+          <div class="space-y-6 py-10 flex flex-col items-center">
+            <a
+              href="index.html#chechallenge"
+              class="text-2sm/none uppercase text-black-secondary"
+              >COS’è <span class="font-semibold">CHE</span>CHALLeNGE?</a
+            >
+            <a
+              href="index.html#approfondimenti"
+              class="text-2sm/none uppercase text-black-secondary"
+              >TUTTI gli approfondimenti</a
+            >
+
+            <a href="#" class="-m-1.5 p-1.5">
+              <span class="flex items-center gap-3">
+                <img
+                  class="size-12 rounded-full object-cover"
+                  src="/assets/images/avatar-placeholder.webp"
+                  alt="user"
+                />
+                <span class="text-2sm/none uppercase text-black-secondary"
+                  >John Doe</span
+                >
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

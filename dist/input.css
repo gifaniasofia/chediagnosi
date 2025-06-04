@@ -1,0 +1,93 @@
+@import 'tailwindcss';
+
+@theme inline {
+  --font-worksans: 'Work Sans', 'sans-serif';
+  --font-inter: 'Inter', 'sans-serif';
+
+  --color-background: #ffffff;
+  --color-foreground: #000000;
+  --color-footer: #204131;
+  --color-black-secondary: #242424;
+  --color-light-gray: #f2f2f2;
+  --color-light-gray-2: #efefef;
+  --color-medium-gray: #d9d9d9;
+  --color-dark-gray: #828282;
+  --color-dark-slate-blue: #3f3d56;
+  --color-dark-slate-blue-2: #323e47;
+  --color-dark-slate-blue-3: #2f2e41;
+  --color-light-brand: #d9fc9d;
+  --color-medium-desctructive: #ff5000;
+  --color-dark-destructive: #c24106;
+  --color-brand: #80eb07;
+  --color-medium-brand: #99e549;
+  --color-dark-brand: #5eb100;
+  --color-darker-brand: #457e04;
+  --color-light-pink: #ffb9b9;
+
+  --text-2xs: 0.625rem;
+  --text-2sm: 0.938rem;
+  /* --text-sm: 1.25rem; */
+  --radius-2.5xl: 1.25rem;
+  --size-4.5: 1.125rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-background text-foreground font-worksans;
+}
+
+button {
+  @apply cursor-pointer disabled:cursor-default;
+}
+
+table,
+td,
+th {
+  @apply border border-dark-gray;
+}
+
+td {
+  @apply px-2.5 py-2.75 text-xs/[14px];
+}
+
+th {
+  @apply px-2.5 py-3.5 bg-light-brand text-sm/[18px] font-bold;
+}
+
+table {
+  @apply min-w-full font-inter text-black tracking-normal;
+}
+
+#sottotipi-eziologici td,
+#sottotipi-clinici td {
+  @apply w-1/5;
+}
+
+@layer utilities {
+  .container-center {
+    @apply max-w-[1315px] mx-auto px-6 lg:px-7;
+  }
+
+  .button-accordion {
+    @apply flex w-full items-center justify-between text-left font-semibold text-foreground -tracking-wider bg-medium-gray hover:bg-medium-gray/70 px-5 py-3 rounded-xl;
+  }
+
+  .text-citation {
+    @apply text-xs/none -tracking-wider;
+  }
+
+  .main-page-container {
+    @apply py-16 sm:pt-17.5 sm:pb-[130px] overflow-hidden w-full;
+  }
+
+  .banner-container {
+    @apply rounded-2.5xl h-32 pl-4.5 relative place-content-center text-base/none font-semibold text-dark-slate-blue;
+  }
+
+  .game-final-card {
+    @apply bg-brand rounded-2.5xl p-3.75 sm:p-4.25 pt-10.25 lg:pt-11.75 flex flex-col items-center justify-between gap-4 sm:gap-4.5 font-bold -tracking-wider text-lg/none lg:text-[1.313rem]/none text-center text-dark-slate-blue-2;
+  }
+}

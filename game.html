@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CHEDiagnosi</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/favicon/favicon-16x16.png"
+    />
+    <link rel="shortcut icon" href="/assets/favicon/favicon.ico" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="/dist/output.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div id="navbar"></div>
+
+    <main class="main-page-container container-center">
+      <div class="flex max-lg:flex-col lg:grid lg:grid-cols-2 gap-10">
+        <div class="max-w-[588px]">
+          <div id="heading"></div>
+
+          <div class="mt-10 lg:mt-15.5 mb-14 lg:mb-19">
+            <h2
+              class="text-brand text-[14.063vw]/[0.8] sm:text-[5.625rem]/17.5 text-left font-bold -tracking-wider"
+            >
+              Rispondi<br />
+              vero o falso
+            </h2>
+          </div>
+
+          <p class="max-w-[397px] text-left text-base sm:text-xl/5.5">
+            Inizia il gioco e rispondi alle domande. Ogni risposta corretta ti
+            farà guadagnare punti, permettendoti di scalare la classifica e
+            confrontarti con altri partecipanti.
+            <br /><br />Pronti? via!
+          </p>
+        </div>
+
+        <div
+          id="game-vero-o-falso"
+          class="border-4 border-black relative -tracking-wider text-lg/none lg:text-xl/6.5 rounded-2.5xl p-4 sm:p-8 lg:p-12.5 transition-all duration-300 flex flex-col flex-1"
+        ></div>
+      </div>
+    </main>
+
+    <div id="footer"></div>
+
+    <script src="/js/main.js"></script>
+    <script src="/js/game.js"></script>
+  </body>
+</html>
