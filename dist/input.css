@@ -43,12 +43,6 @@ button {
   @apply cursor-pointer disabled:cursor-default;
 }
 
-table,
-td,
-th {
-  @apply border border-dark-gray;
-}
-
 td {
   @apply px-2.5 py-2.75 text-xs/[14px];
 }
@@ -58,11 +52,18 @@ th {
 }
 
 table {
-  @apply min-w-full font-inter text-black tracking-normal;
+  @apply min-w-full font-inter text-black tracking-normal divide-y divide-dark-gray;
 }
 
-#sottotipi-eziologici td,
-#sottotipi-clinici td {
+tbody {
+  @apply divide-y divide-dark-gray;
+}
+
+tr {
+  @apply divide-x divide-dark-gray;
+}
+
+.table-classification td {
   @apply w-1/5;
 }
 

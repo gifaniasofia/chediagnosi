@@ -59,9 +59,7 @@ function renderQuestion() {
         </div>
 
         <div class="p-2.5 lg:px-5.5 lg:py-4.5 min-h-[150px] relative flex items-center justify-center font-bold text-white text-base/5 lg:text-lg/5.75 text-center bg-dark-slate-blue-2/50 rounded-2.5xl">
-          <div class="absolute -top-26 sm:-top-29 -right-0.5">
-            <img id="mascot-game-answer" src="/assets/images/mascot-correct.webp" alt="answer" class="w-auto h-28 sm:h-32" />
-          </div>
+          <div id="mascot-game-answer" class="absolute -top-26 sm:-top-29 -right-0.5"></div>
           <p id="game-vero-o-falso-description"></p>
         </div>
       </div>
@@ -103,16 +101,19 @@ function answer(isTrue) {
 
   btnNext.disabled = false;
 
-  const explanation = document.getElementById('game-vero-o-falso-explanation');
-  explanation.classList.remove('opacity-0');
-
   const mascotImage = document.getElementById('mascot-game-answer');
-  mascotImage.src = `/assets/images/mascot-${
-    isCorrect ? 'correct' : 'wrong'
-  }.webp`;
+  mascotImage.innerHTML = `
+    <img src="/assets/images/mascot-${
+      isCorrect ? 'correct' : 'wrong'
+    }.webp" alt="answer" class="w-auto h-28 sm:h-32" />
+  `;
 
   const description = document.getElementById('game-vero-o-falso-description');
   description.textContent = q.description[isTrue];
+
+  const explanation = document.getElementById('game-vero-o-falso-explanation');
+
+  explanation.classList.remove('opacity-0');
 }
 
 function nextQuestion() {
